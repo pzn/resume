@@ -1,0 +1,56 @@
+/*
+    Convert to PDF how to
+    - Open in IE (tested with IE9). It it the only browser that respects the @page attribute (see below)
+    - Print preview
+    - Remove header and footer
+    - Recommended margins: 10mm for left and right, 17mm for top, 15mm for bottom
+    - In setup, enable "Print Background Colors and Images" 
+      (needed so that circle in timeline hides border under it)
+    - Print to pdf
+*/
+
+/* 
+    We force bootstrap to use medium device grid layout (md styles) for print. 
+    Works in IE, but not Chrome nor FF.
+*/
+
+@page {
+    min-width: 992px;
+}
+
+body {
+    margin: 0;
+    padding 0 !important;
+    min-width: 992px;
+}
+
+.container {
+    width: auto;
+    min-width: 980px;
+}
+
+.download {
+    display: none;
+}
+
+.no-print {
+    display: none;
+}
+
+.rskills {
+    color: black;
+}
+
+.motivation p {
+    line-height: 1.35em;
+}
+
+.separator {
+    border-bottom: 0;
+    margin-top: 0em;
+}
+
+/* Overwrite bootstrap that appends urls to links in print */
+a[href]:after {
+    content: "";
+}
