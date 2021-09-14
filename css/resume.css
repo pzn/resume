@@ -242,6 +242,15 @@ section .glyphicon-chevron-right {
     content: "";
 }
 
+/* Section: more */
+.more h1 {
+    padding-top: 1.4em;
+    line-height: 1.4em;
+    font-size: 0.8em;
+    text-align: left;
+    font-style: italic;
+}
+
 /* Section: backend */
 .backend {
     padding-top: 1.4em;
